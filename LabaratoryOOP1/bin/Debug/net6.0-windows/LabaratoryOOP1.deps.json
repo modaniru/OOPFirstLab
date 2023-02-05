@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "LabaratoryOOP1/1.0.0": {
+        "runtime": {
+          "LabaratoryOOP1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LabaratoryOOP1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
