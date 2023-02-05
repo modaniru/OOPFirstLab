@@ -62,5 +62,10 @@ namespace LabaratoryOOP1
             blue++;
             changeColor();
         }
+
+        private void pbColor_Click(object sender, EventArgs e)
+        {
+            //test
+        }
     }
 }

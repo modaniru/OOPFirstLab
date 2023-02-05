@@ -69,6 +69,7 @@
             this.pbColor.Size = new System.Drawing.Size(100, 100);
             this.pbColor.TabIndex = 2;
             this.pbColor.TabStop = false;
+            this.pbColor.Click += new System.EventHandler(this.pbColor_Click);
             // 
             // btnReset
             // 
