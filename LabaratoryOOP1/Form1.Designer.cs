@@ -47,6 +47,16 @@
             this.lblRed = new System.Windows.Forms.Label();
             this.lblGreen = new System.Windows.Forms.Label();
             this.lblBlue = new System.Windows.Forms.Label();
+            this.gitHubLink = new System.Windows.Forms.LinkLabel();
+            this.gpField = new System.Windows.Forms.GroupBox();
+            this.player = new System.Windows.Forms.RadioButton();
+            this.btnX = new System.Windows.Forms.Button();
+            this.btnY = new System.Windows.Forms.Button();
+            this.timerX = new System.Windows.Forms.Timer(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timerY = new System.Windows.Forms.Timer(this.components);
+            this.btnXReverse = new System.Windows.Forms.Button();
+            this.btnYReverse = new System.Windows.Forms.Button();
             this.gbColor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBlue)).BeginInit();
@@ -56,6 +66,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.redTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlueTrackBar)).BeginInit();
+            this.gpField.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbColor
@@ -159,7 +170,7 @@
             // 
             // dtpChooseDate
             // 
-            this.dtpChooseDate.Location = new System.Drawing.Point(382, 21);
+            this.dtpChooseDate.Location = new System.Drawing.Point(479, 34);
             this.dtpChooseDate.Name = "dtpChooseDate";
             this.dtpChooseDate.Size = new System.Drawing.Size(200, 23);
             this.dtpChooseDate.TabIndex = 3;
@@ -168,7 +179,7 @@
             // lblBirthDay
             // 
             this.lblBirthDay.AutoSize = true;
-            this.lblBirthDay.Location = new System.Drawing.Point(454, 84);
+            this.lblBirthDay.Location = new System.Drawing.Point(553, 82);
             this.lblBirthDay.Name = "lblBirthDay";
             this.lblBirthDay.Size = new System.Drawing.Size(38, 15);
             this.lblBirthDay.TabIndex = 4;
@@ -238,11 +249,103 @@
             this.lblBlue.TabIndex = 10;
             this.lblBlue.Text = "label3";
             // 
+            // gitHubLink
+            // 
+            this.gitHubLink.AutoSize = true;
+            this.gitHubLink.Location = new System.Drawing.Point(692, 426);
+            this.gitHubLink.Name = "gitHubLink";
+            this.gitHubLink.Size = new System.Drawing.Size(96, 15);
+            this.gitHubLink.TabIndex = 11;
+            this.gitHubLink.TabStop = true;
+            this.gitHubLink.Text = "go to my GitHub";
+            this.gitHubLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.gitHubLink_LinkClicked);
+            // 
+            // gpField
+            // 
+            this.gpField.Controls.Add(this.player);
+            this.gpField.Location = new System.Drawing.Point(339, 121);
+            this.gpField.Name = "gpField";
+            this.gpField.Size = new System.Drawing.Size(382, 180);
+            this.gpField.TabIndex = 12;
+            this.gpField.TabStop = false;
+            this.gpField.Text = "groupBox1";
+            // 
+            // player
+            // 
+            this.player.AutoSize = true;
+            this.player.Location = new System.Drawing.Point(115, 87);
+            this.player.Name = "player";
+            this.player.Size = new System.Drawing.Size(14, 13);
+            this.player.TabIndex = 0;
+            this.player.TabStop = true;
+            this.player.UseVisualStyleBackColor = true;
+            // 
+            // btnX
+            // 
+            this.btnX.Location = new System.Drawing.Point(477, 343);
+            this.btnX.Name = "btnX";
+            this.btnX.Size = new System.Drawing.Size(30, 30);
+            this.btnX.TabIndex = 13;
+            this.btnX.Text = "x";
+            this.btnX.UseVisualStyleBackColor = true;
+            this.btnX.MouseEnter += new System.EventHandler(this.btnX_MouseEnter);
+            this.btnX.MouseLeave += new System.EventHandler(this.btnX_MouseLeave);
+            // 
+            // btnY
+            // 
+            this.btnY.Location = new System.Drawing.Point(441, 307);
+            this.btnY.Name = "btnY";
+            this.btnY.Size = new System.Drawing.Size(30, 30);
+            this.btnY.TabIndex = 15;
+            this.btnY.Text = "y";
+            this.btnY.UseVisualStyleBackColor = true;
+            this.btnY.MouseEnter += new System.EventHandler(this.btnY_MouseEnter);
+            this.btnY.MouseLeave += new System.EventHandler(this.btnY_MouseLeave);
+            // 
+            // timerX
+            // 
+            this.timerX.Enabled = true;
+            this.timerX.Interval = 1;
+            this.timerX.Tick += new System.EventHandler(this.timerX_Tick);
+            // 
+            // timerY
+            // 
+            this.timerY.Interval = 1;
+            this.timerY.Tick += new System.EventHandler(this.timerY_Tick);
+            // 
+            // btnXReverse
+            // 
+            this.btnXReverse.Location = new System.Drawing.Point(407, 343);
+            this.btnXReverse.Name = "btnXReverse";
+            this.btnXReverse.Size = new System.Drawing.Size(30, 30);
+            this.btnXReverse.TabIndex = 16;
+            this.btnXReverse.Text = "x";
+            this.btnXReverse.UseVisualStyleBackColor = true;
+            this.btnXReverse.MouseEnter += new System.EventHandler(this.btnXReverse_MouseEnter);
+            this.btnXReverse.MouseLeave += new System.EventHandler(this.btnXReverse_MouseLeave);
+            // 
+            // btnYReverse
+            // 
+            this.btnYReverse.Location = new System.Drawing.Point(441, 376);
+            this.btnYReverse.Name = "btnYReverse";
+            this.btnYReverse.Size = new System.Drawing.Size(30, 30);
+            this.btnYReverse.TabIndex = 17;
+            this.btnYReverse.Text = "y";
+            this.btnYReverse.UseVisualStyleBackColor = true;
+            this.btnYReverse.MouseEnter += new System.EventHandler(this.btnYReverse_MouseEnter);
+            this.btnYReverse.MouseLeave += new System.EventHandler(this.btnYReverse_MouseLeave);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnYReverse);
+            this.Controls.Add(this.btnXReverse);
+            this.Controls.Add(this.btnY);
+            this.Controls.Add(this.btnX);
+            this.Controls.Add(this.gpField);
+            this.Controls.Add(this.gitHubLink);
             this.Controls.Add(this.lblBlue);
             this.Controls.Add(this.lblGreen);
             this.Controls.Add(this.lblRed);
@@ -265,6 +368,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.redTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlueTrackBar)).EndInit();
+            this.gpField.ResumeLayout(false);
+            this.gpField.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -289,5 +394,15 @@
         private Label lblRed;
         private Label lblGreen;
         private Label lblBlue;
+        private LinkLabel gitHubLink;
+        private GroupBox gpField;
+        private RadioButton player;
+        private Button btnX;
+        private Button btnY;
+        private System.Windows.Forms.Timer timerX;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timerY;
+        private Button btnXReverse;
+        private Button btnYReverse;
     }
 }

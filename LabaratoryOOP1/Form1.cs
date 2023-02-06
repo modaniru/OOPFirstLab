@@ -1,9 +1,15 @@
+using System.Diagnostics;
+using System.Security.Policy;
+
 namespace LabaratoryOOP1
 {
     public partial class frmMain : Form
     {
 
         private DateTime bd = new DateTime(DateTime.Now.Year, 5, 16);
+        private int XDirection = 0;
+        private int YDirection = 0;
+
 
         public frmMain()
         {
@@ -121,6 +127,85 @@ namespace LabaratoryOOP1
         private void frmMain_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void gitHubLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo() { FileName = "https://github.com/modaniru", UseShellExecute = true });
+        }
+
+        private void btnX_MouseDown(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void btnX_MouseUp(object sender, MouseEventArgs e)
+        {
+            timerX.Enabled = false;
+        }
+
+        private void timerX_Tick(object sender, EventArgs e)
+        {
+            int x = player.Location.X + (XDirection * 2);
+            if(x < 0 || x > gpField.Width - player.Width)
+            {
+                x = player.Location.X;
+            }
+            player.Location = new Point(x, player.Location.Y);
+        }
+
+        private void timerY_Tick(object sender, EventArgs e)
+        {
+            int y = player.Location.Y + (YDirection * 2);
+            if(y > gpField.Height - player.Height || y < 0)
+            {
+                y = player.Location.Y;
+            }
+            player.Location = new Point(player.Location.X, y);
+        }
+
+        private void btnX_MouseEnter(object sender, EventArgs e)
+        {
+            XDirection = 1;
+            timerX.Enabled = true;
+        }
+
+        private void btnX_MouseLeave(object sender, EventArgs e)
+        {
+            timerX.Enabled = false;
+        }
+
+        private void btnY_MouseEnter(object sender, EventArgs e)
+        {
+            YDirection = -1;
+            timerY.Enabled = true;
+        }
+
+        private void btnY_MouseLeave(object sender, EventArgs e)
+        {
+            timerY.Enabled = false;
+        }
+
+        private void btnXReverse_MouseEnter(object sender, EventArgs e)
+        {
+            XDirection = -1;
+            timerX.Enabled = true;
+        }
+
+        private void btnXReverse_MouseLeave(object sender, EventArgs e)
+        {
+            timerX.Enabled = false;
+        }
+
+        private void btnYReverse_MouseEnter(object sender, EventArgs e)
+        {
+            YDirection = 1;
+            timerY.Enabled = true;
+        }
+
+        private void btnYReverse_MouseLeave(object sender, EventArgs e)
+        {
+            timerY.Enabled = false;
         }
     }
 }

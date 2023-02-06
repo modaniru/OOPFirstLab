@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\xmoon\\Source\\Repos\\OOPFirstLab32131234521\\LabaratoryOOP1\\LabaratoryOOP1.csproj": {}
+    "C:\\Users\\xmoon\\source\\repos\\OOPFirstLab32131234521\\LabaratoryOOP1\\LabaratoryOOP1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\xmoon\\Source\\Repos\\OOPFirstLab32131234521\\LabaratoryOOP1\\LabaratoryOOP1.csproj": {
+    "C:\\Users\\xmoon\\source\\repos\\OOPFirstLab32131234521\\LabaratoryOOP1\\LabaratoryOOP1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\xmoon\\Source\\Repos\\OOPFirstLab32131234521\\LabaratoryOOP1\\LabaratoryOOP1.csproj",
+        "projectUniqueName": "C:\\Users\\xmoon\\source\\repos\\OOPFirstLab32131234521\\LabaratoryOOP1\\LabaratoryOOP1.csproj",
         "projectName": "LabaratoryOOP1",
-        "projectPath": "C:\\Users\\xmoon\\Source\\Repos\\OOPFirstLab32131234521\\LabaratoryOOP1\\LabaratoryOOP1.csproj",
+        "projectPath": "C:\\Users\\xmoon\\source\\repos\\OOPFirstLab32131234521\\LabaratoryOOP1\\LabaratoryOOP1.csproj",
         "packagesPath": "C:\\Users\\xmoon\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\xmoon\\Source\\Repos\\OOPFirstLab32131234521\\LabaratoryOOP1\\obj\\",
+        "outputPath": "C:\\Users\\xmoon\\source\\repos\\OOPFirstLab32131234521\\LabaratoryOOP1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\xmoon\\AppData\\Roaming\\NuGet\\NuGet.Config",

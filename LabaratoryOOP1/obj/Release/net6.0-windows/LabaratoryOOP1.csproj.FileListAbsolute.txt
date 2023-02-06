@@ -1,0 +1,17 @@
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\bin\Release\net6.0-windows\LabaratoryOOP1.exe
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\bin\Release\net6.0-windows\LabaratoryOOP1.deps.json
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\bin\Release\net6.0-windows\LabaratoryOOP1.runtimeconfig.json
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\bin\Release\net6.0-windows\LabaratoryOOP1.dll
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\bin\Release\net6.0-windows\LabaratoryOOP1.pdb
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Release\net6.0-windows\LabaratoryOOP1.csproj.AssemblyReference.cache
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Release\net6.0-windows\LabaratoryOOP1.frmMain.resources
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Release\net6.0-windows\LabaratoryOOP1.csproj.GenerateResource.cache
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Release\net6.0-windows\LabaratoryOOP1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Release\net6.0-windows\LabaratoryOOP1.AssemblyInfoInputs.cache
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Release\net6.0-windows\LabaratoryOOP1.AssemblyInfo.cs
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Release\net6.0-windows\LabaratoryOOP1.csproj.CoreCompileInputs.cache
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Release\net6.0-windows\LabaratoryOOP1.dll
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Release\net6.0-windows\refint\LabaratoryOOP1.dll
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Release\net6.0-windows\LabaratoryOOP1.pdb
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Release\net6.0-windows\LabaratoryOOP1.genruntimeconfig.cache
+C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Release\net6.0-windows\ref\LabaratoryOOP1.dll
