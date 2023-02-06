@@ -41,18 +41,21 @@
             this.blueTick = new System.Windows.Forms.Timer(this.components);
             this.dtpChooseDate = new System.Windows.Forms.DateTimePicker();
             this.lblBirthDay = new System.Windows.Forms.Label();
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
-            this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.trackBar3 = new System.Windows.Forms.TrackBar();
+            this.redTrackBar = new System.Windows.Forms.TrackBar();
+            this.greenTrackBar = new System.Windows.Forms.TrackBar();
+            this.BlueTrackBar = new System.Windows.Forms.TrackBar();
+            this.lblRed = new System.Windows.Forms.Label();
+            this.lblGreen = new System.Windows.Forms.Label();
+            this.lblBlue = new System.Windows.Forms.Label();
             this.gbColor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBlue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoGenerateColor)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlueTrackBar)).BeginInit();
             this.SuspendLayout();
             // 
             // gbColor
@@ -171,59 +174,97 @@
             this.lblBirthDay.TabIndex = 4;
             this.lblBirthDay.Text = "label1";
             // 
-            // trackBar1
+            // redTrackBar
             // 
-            this.trackBar1.Location = new System.Drawing.Point(150, 181);
-            this.trackBar1.Maximum = 500;
-            this.trackBar1.Minimum = 5;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Size = new System.Drawing.Size(104, 45);
-            this.trackBar1.TabIndex = 5;
-            this.trackBar1.Value = 10;
+            this.redTrackBar.Location = new System.Drawing.Point(150, 181);
+            this.redTrackBar.Maximum = 500;
+            this.redTrackBar.Minimum = 1;
+            this.redTrackBar.Name = "redTrackBar";
+            this.redTrackBar.Size = new System.Drawing.Size(104, 45);
+            this.redTrackBar.TabIndex = 5;
+            this.redTrackBar.Value = 10;
+            this.redTrackBar.Scroll += new System.EventHandler(this.redTrackBar_Scroll);
             // 
-            // trackBar2
+            // greenTrackBar
             // 
-            this.trackBar2.Location = new System.Drawing.Point(150, 221);
-            this.trackBar2.Maximum = 500;
-            this.trackBar2.Minimum = 5;
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(104, 45);
-            this.trackBar2.TabIndex = 6;
-            this.trackBar2.Value = 5;
+            this.greenTrackBar.Location = new System.Drawing.Point(150, 216);
+            this.greenTrackBar.Maximum = 500;
+            this.greenTrackBar.Minimum = 1;
+            this.greenTrackBar.Name = "greenTrackBar";
+            this.greenTrackBar.Size = new System.Drawing.Size(104, 45);
+            this.greenTrackBar.TabIndex = 6;
+            this.greenTrackBar.Value = 5;
+            this.greenTrackBar.Scroll += new System.EventHandler(this.greenTrackBar_Scroll);
             // 
-            // trackBar3
+            // BlueTrackBar
             // 
-            this.trackBar3.Location = new System.Drawing.Point(150, 256);
-            this.trackBar3.Maximum = 500;
-            this.trackBar3.Minimum = 5;
-            this.trackBar3.Name = "trackBar3";
-            this.trackBar3.Size = new System.Drawing.Size(104, 45);
-            this.trackBar3.TabIndex = 7;
-            this.trackBar3.Value = 5;
+            this.BlueTrackBar.Location = new System.Drawing.Point(150, 256);
+            this.BlueTrackBar.Maximum = 500;
+            this.BlueTrackBar.Minimum = 1;
+            this.BlueTrackBar.Name = "BlueTrackBar";
+            this.BlueTrackBar.Size = new System.Drawing.Size(104, 45);
+            this.BlueTrackBar.TabIndex = 7;
+            this.BlueTrackBar.Value = 5;
+            this.BlueTrackBar.Scroll += new System.EventHandler(this.BlueTrackBar_Scroll);
+            // 
+            // lblRed
+            // 
+            this.lblRed.AutoSize = true;
+            this.lblRed.BackColor = System.Drawing.SystemColors.Menu;
+            this.lblRed.ForeColor = System.Drawing.Color.Red;
+            this.lblRed.Location = new System.Drawing.Point(260, 181);
+            this.lblRed.Name = "lblRed";
+            this.lblRed.Size = new System.Drawing.Size(38, 15);
+            this.lblRed.TabIndex = 8;
+            this.lblRed.Text = "label1";
+            // 
+            // lblGreen
+            // 
+            this.lblGreen.AutoSize = true;
+            this.lblGreen.ForeColor = System.Drawing.Color.Green;
+            this.lblGreen.Location = new System.Drawing.Point(260, 216);
+            this.lblGreen.Name = "lblGreen";
+            this.lblGreen.Size = new System.Drawing.Size(38, 15);
+            this.lblGreen.TabIndex = 9;
+            this.lblGreen.Text = "label2";
+            // 
+            // lblBlue
+            // 
+            this.lblBlue.AutoSize = true;
+            this.lblBlue.ForeColor = System.Drawing.Color.Blue;
+            this.lblBlue.Location = new System.Drawing.Point(260, 256);
+            this.lblBlue.Name = "lblBlue";
+            this.lblBlue.Size = new System.Drawing.Size(38, 15);
+            this.lblBlue.TabIndex = 10;
+            this.lblBlue.Text = "label3";
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.trackBar3);
-            this.Controls.Add(this.trackBar2);
-            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.lblBlue);
+            this.Controls.Add(this.lblGreen);
+            this.Controls.Add(this.lblRed);
+            this.Controls.Add(this.BlueTrackBar);
+            this.Controls.Add(this.greenTrackBar);
+            this.Controls.Add(this.redTrackBar);
             this.Controls.Add(this.lblBirthDay);
             this.Controls.Add(this.dtpChooseDate);
             this.Controls.Add(this.autoGenerateColor);
             this.Controls.Add(this.gbColor);
             this.Name = "frmMain";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.gbColor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBlue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuGreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoGenerateColor)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.redTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BlueTrackBar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,8 +283,11 @@
         private System.Windows.Forms.Timer blueTick;
         private DateTimePicker dtpChooseDate;
         private Label lblBirthDay;
-        private TrackBar trackBar1;
-        private TrackBar trackBar2;
-        private TrackBar trackBar3;
+        private TrackBar redTrackBar;
+        private TrackBar greenTrackBar;
+        private TrackBar BlueTrackBar;
+        private Label lblRed;
+        private Label lblGreen;
+        private Label lblBlue;
     }
 }

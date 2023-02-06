@@ -62,18 +62,21 @@ namespace LabaratoryOOP1
         {
             changeColor();
             red++;
+            lblRed.Text = getColor(red).ToString();
         }
 
         private void greenTick_Tick(object sender, EventArgs e)
         {
-            green++;
             changeColor();
+            green++;
+            lblGreen.Text = getColor(green).ToString();
         }
 
         private void blueTick_Tick(object sender, EventArgs e)
         {
             blue++;
             changeColor();
+            lblBlue.Text = getColor(blue).ToString();
         }
 
         private void pbColor_Click(object sender, EventArgs e)
@@ -97,6 +100,27 @@ namespace LabaratoryOOP1
             {
                 lblBirthDay.Text = "До моего др " + bd.Subtract(now).Days + " дней";
             }
+        }
+
+        private void redTrackBar_Scroll(object sender, EventArgs e)
+        {
+            redTick.Interval = redTrackBar.Value;
+        }
+
+        private void greenTrackBar_Scroll(object sender, EventArgs e)
+        {
+            greenTick.Interval = greenTrackBar.Value;
+        }
+
+        private void BlueTrackBar_Scroll(object sender, EventArgs e)
+        {
+            blueTick.Interval = BlueTrackBar.Value;
+
+        }
+
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
