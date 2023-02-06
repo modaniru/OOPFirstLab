@@ -133,11 +133,8 @@ namespace LabaratoryOOP1
         private void gitHubLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             Process.Start(new ProcessStartInfo() { FileName = "https://github.com/modaniru", UseShellExecute = true });
-        }
-
-        private void btnX_MouseDown(object sender, MouseEventArgs e)
-        {
-            
+            LinkLabel l = (LinkLabel)sender;
+            this.Controls.Remove(l);
         }
 
         private void btnX_MouseUp(object sender, MouseEventArgs e)
@@ -227,6 +224,24 @@ namespace LabaratoryOOP1
         private void player_LocationChanged(object sender, EventArgs e)
         {
             pbPos.Value = player.Location.X + player.Location.Y;
+        }
+
+        private void frmMain_MouseClick(object sender, MouseEventArgs e)
+        {
+            if(e.Button== MouseButtons.Right) {
+                LinkLabel lbl = new System.Windows.Forms.LinkLabel();
+
+                lbl.AutoSize = true;
+                lbl.Location = new System.Drawing.Point(e.X - 96 / 2, e.Y - 15 / 2);
+                lbl.Name = "gitHubLink";
+                lbl.Size = new System.Drawing.Size(96, 15);
+                lbl.TabIndex = 11;
+                lbl.TabStop = true;
+                lbl.Text = "go to my GitHub";
+                lbl.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.gitHubLink_LinkClicked);
+
+                this.Controls.Add(lbl);
+            }
         }
     }
 }

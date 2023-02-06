@@ -393,6 +393,7 @@
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.DoubleClick += new System.EventHandler(this.niDest_DoubleClick);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmMain_MouseClick);
             this.gbColor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBlue)).EndInit();
