@@ -57,6 +57,9 @@
             this.timerY = new System.Windows.Forms.Timer(this.components);
             this.btnXReverse = new System.Windows.Forms.Button();
             this.btnYReverse = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pbPos = new System.Windows.Forms.ProgressBar();
+            this.lbTeleporter = new System.Windows.Forms.ListBox();
             this.gbColor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBlue)).BeginInit();
@@ -268,17 +271,17 @@
             this.gpField.Size = new System.Drawing.Size(382, 180);
             this.gpField.TabIndex = 12;
             this.gpField.TabStop = false;
-            this.gpField.Text = "groupBox1";
             // 
             // player
             // 
             this.player.AutoSize = true;
-            this.player.Location = new System.Drawing.Point(115, 87);
+            this.player.Location = new System.Drawing.Point(68, 24);
             this.player.Name = "player";
             this.player.Size = new System.Drawing.Size(14, 13);
             this.player.TabIndex = 0;
             this.player.TabStop = true;
             this.player.UseVisualStyleBackColor = true;
+            this.player.LocationChanged += new System.EventHandler(this.player_LocationChanged);
             // 
             // btnX
             // 
@@ -335,11 +338,41 @@
             this.btnYReverse.MouseEnter += new System.EventHandler(this.btnYReverse_MouseEnter);
             this.btnYReverse.MouseLeave += new System.EventHandler(this.btnYReverse_MouseLeave);
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(600, 312);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 23);
+            this.comboBox1.TabIndex = 18;
+            this.comboBox1.Text = "teleport";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // pbPos
+            // 
+            this.pbPos.Location = new System.Drawing.Point(339, 100);
+            this.pbPos.Name = "pbPos";
+            this.pbPos.Size = new System.Drawing.Size(382, 23);
+            this.pbPos.TabIndex = 19;
+            this.pbPos.Value = 5;
+            // 
+            // lbTeleporter
+            // 
+            this.lbTeleporter.FormattingEnabled = true;
+            this.lbTeleporter.ItemHeight = 15;
+            this.lbTeleporter.Location = new System.Drawing.Point(727, 132);
+            this.lbTeleporter.Name = "lbTeleporter";
+            this.lbTeleporter.Size = new System.Drawing.Size(186, 169);
+            this.lbTeleporter.TabIndex = 20;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1059, 450);
+            this.Controls.Add(this.lbTeleporter);
+            this.Controls.Add(this.pbPos);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.btnYReverse);
             this.Controls.Add(this.btnXReverse);
             this.Controls.Add(this.btnY);
@@ -359,6 +392,7 @@
             this.Name = "frmMain";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.DoubleClick += new System.EventHandler(this.niDest_DoubleClick);
             this.gbColor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBlue)).EndInit();
@@ -404,5 +438,8 @@
         private System.Windows.Forms.Timer timerY;
         private Button btnXReverse;
         private Button btnYReverse;
+        private ComboBox comboBox1;
+        private ProgressBar pbPos;
+        private ListBox lbTeleporter;
     }
 }

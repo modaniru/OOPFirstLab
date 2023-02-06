@@ -14,6 +14,7 @@ namespace LabaratoryOOP1
         public frmMain()
         {
             this.InitializeComponent();
+            pbPos.Maximum = (gpField.Width - player.Width) + (gpField.Height - player.Height);
             DateTime now = DateTime.Now; 
             if(now.CompareTo(bd) > 0 )
             {
@@ -206,6 +207,26 @@ namespace LabaratoryOOP1
         private void btnYReverse_MouseLeave(object sender, EventArgs e)
         {
             timerY.Enabled = false;
+        }
+
+        private void niDest_DoubleClick(object sender, EventArgs e)
+        {
+            comboBox1.Items.Add(player.Location);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = comboBox1.SelectedIndex;
+            Point point = (Point)comboBox1.SelectedItem;
+
+            lbTeleporter.Items.Add("teleport to: " + point);
+            player.Location = point;
+
+        }
+
+        private void player_LocationChanged(object sender, EventArgs e)
+        {
+            pbPos.Value = player.Location.X + player.Location.Y;
         }
     }
 }
