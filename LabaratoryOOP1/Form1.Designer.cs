@@ -39,12 +39,20 @@
             this.autoGenerateColor = new System.Windows.Forms.PictureBox();
             this.greenTick = new System.Windows.Forms.Timer(this.components);
             this.blueTick = new System.Windows.Forms.Timer(this.components);
+            this.dtpChooseDate = new System.Windows.Forms.DateTimePicker();
+            this.lblBirthDay = new System.Windows.Forms.Label();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.trackBar2 = new System.Windows.Forms.TrackBar();
+            this.trackBar3 = new System.Windows.Forms.TrackBar();
             this.gbColor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBlue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuGreen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuRed)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoGenerateColor)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             this.SuspendLayout();
             // 
             // gbColor
@@ -146,11 +154,63 @@
             this.blueTick.Interval = 80;
             this.blueTick.Tick += new System.EventHandler(this.blueTick_Tick);
             // 
+            // dtpChooseDate
+            // 
+            this.dtpChooseDate.Location = new System.Drawing.Point(382, 21);
+            this.dtpChooseDate.Name = "dtpChooseDate";
+            this.dtpChooseDate.Size = new System.Drawing.Size(200, 23);
+            this.dtpChooseDate.TabIndex = 3;
+            this.dtpChooseDate.ValueChanged += new System.EventHandler(this.dtpChooseDate_ValueChanged);
+            // 
+            // lblBirthDay
+            // 
+            this.lblBirthDay.AutoSize = true;
+            this.lblBirthDay.Location = new System.Drawing.Point(454, 84);
+            this.lblBirthDay.Name = "lblBirthDay";
+            this.lblBirthDay.Size = new System.Drawing.Size(38, 15);
+            this.lblBirthDay.TabIndex = 4;
+            this.lblBirthDay.Text = "label1";
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(150, 181);
+            this.trackBar1.Maximum = 500;
+            this.trackBar1.Minimum = 5;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(104, 45);
+            this.trackBar1.TabIndex = 5;
+            this.trackBar1.Value = 10;
+            // 
+            // trackBar2
+            // 
+            this.trackBar2.Location = new System.Drawing.Point(150, 221);
+            this.trackBar2.Maximum = 500;
+            this.trackBar2.Minimum = 5;
+            this.trackBar2.Name = "trackBar2";
+            this.trackBar2.Size = new System.Drawing.Size(104, 45);
+            this.trackBar2.TabIndex = 6;
+            this.trackBar2.Value = 5;
+            // 
+            // trackBar3
+            // 
+            this.trackBar3.Location = new System.Drawing.Point(150, 256);
+            this.trackBar3.Maximum = 500;
+            this.trackBar3.Minimum = 5;
+            this.trackBar3.Name = "trackBar3";
+            this.trackBar3.Size = new System.Drawing.Size(104, 45);
+            this.trackBar3.TabIndex = 7;
+            this.trackBar3.Value = 5;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.trackBar3);
+            this.Controls.Add(this.trackBar2);
+            this.Controls.Add(this.trackBar1);
+            this.Controls.Add(this.lblBirthDay);
+            this.Controls.Add(this.dtpChooseDate);
             this.Controls.Add(this.autoGenerateColor);
             this.Controls.Add(this.gbColor);
             this.Name = "frmMain";
@@ -161,7 +221,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.nuGreen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuRed)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.autoGenerateColor)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -176,5 +240,10 @@
         private PictureBox autoGenerateColor;
         private System.Windows.Forms.Timer greenTick;
         private System.Windows.Forms.Timer blueTick;
+        private DateTimePicker dtpChooseDate;
+        private Label lblBirthDay;
+        private TrackBar trackBar1;
+        private TrackBar trackBar2;
+        private TrackBar trackBar3;
     }
 }

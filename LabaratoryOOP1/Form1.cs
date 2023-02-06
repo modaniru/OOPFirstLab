@@ -2,9 +2,22 @@ namespace LabaratoryOOP1
 {
     public partial class frmMain : Form
     {
+
+        private DateTime bd = new DateTime(DateTime.Now.Year, 5, 16);
+
         public frmMain()
         {
             this.InitializeComponent();
+            DateTime now = DateTime.Now; 
+            if(now.CompareTo(bd) > 0 )
+            {
+                lblBirthDay.Text = "До моего др " + bd.AddYears(1).Subtract(DateTime.Now).Days + " дней";
+            }
+            else
+            {
+                lblBirthDay.Text = "До моего др " + bd.Subtract(DateTime.Now).Days + " дней";
+            }
+            
         }
 
         private int red = 0;
@@ -66,6 +79,24 @@ namespace LabaratoryOOP1
         private void pbColor_Click(object sender, EventArgs e)
         {
             //test
+        }
+
+        private void dtpChooseDate_ValueChanged(object sender, EventArgs e)
+        {
+            DateTime now = dtpChooseDate.Value.Date;
+            if (now.Equals(bd))
+            {
+                lblBirthDay.Text = "с др!";
+            }
+            else if (now.CompareTo(bd) > 0)
+            {
+
+                lblBirthDay.Text = "До моего др " + bd.AddYears(1).Subtract(now).Days + " дней";
+            }
+            else
+            {
+                lblBirthDay.Text = "До моего др " + bd.Subtract(now).Days + " дней";
+            }
         }
     }
 }
