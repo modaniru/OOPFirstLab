@@ -60,6 +60,10 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pbPos = new System.Windows.Forms.ProgressBar();
             this.lbTeleporter = new System.Windows.Forms.ListBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.pbOpenDialog = new System.Windows.Forms.PictureBox();
             this.gbColor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBlue)).BeginInit();
@@ -70,6 +74,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlueTrackBar)).BeginInit();
             this.gpField.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOpenDialog)).BeginInit();
             this.SuspendLayout();
             // 
             // gbColor
@@ -187,6 +192,7 @@
             this.lblBirthDay.Size = new System.Drawing.Size(38, 15);
             this.lblBirthDay.TabIndex = 4;
             this.lblBirthDay.Text = "label1";
+            this.lblBirthDay.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // redTrackBar
             // 
@@ -365,11 +371,25 @@
             this.lbTeleporter.Size = new System.Drawing.Size(186, 169);
             this.lbTeleporter.TabIndex = 20;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // pbOpenDialog
+            // 
+            this.pbOpenDialog.Location = new System.Drawing.Point(12, 312);
+            this.pbOpenDialog.Name = "pbOpenDialog";
+            this.pbOpenDialog.Size = new System.Drawing.Size(326, 94);
+            this.pbOpenDialog.TabIndex = 21;
+            this.pbOpenDialog.TabStop = false;
+            this.pbOpenDialog.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1059, 450);
+            this.Controls.Add(this.pbOpenDialog);
             this.Controls.Add(this.lbTeleporter);
             this.Controls.Add(this.pbPos);
             this.Controls.Add(this.comboBox1);
@@ -405,6 +425,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.BlueTrackBar)).EndInit();
             this.gpField.ResumeLayout(false);
             this.gpField.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOpenDialog)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,5 +463,9 @@
         private ComboBox comboBox1;
         private ProgressBar pbPos;
         private ListBox lbTeleporter;
+        private ToolTip toolTip1;
+        private OpenFileDialog openFileDialog1;
+        private ColorDialog colorDialog1;
+        private PictureBox pbOpenDialog;
     }
 }

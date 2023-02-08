@@ -88,7 +88,12 @@ namespace LabaratoryOOP1
 
         private void pbColor_Click(object sender, EventArgs e)
         {
-            //test
+            colorDialog1.ShowDialog();
+            Color color = colorDialog1.Color;
+            pbColor.BackColor = colorDialog1.Color;
+            nuRed.Value = color.R;
+            nuGreen.Value = color.G;
+            nuBlue.Value = color.B;
         }
 
         private void dtpChooseDate_ValueChanged(object sender, EventArgs e)
@@ -242,6 +247,13 @@ namespace LabaratoryOOP1
 
                 this.Controls.Add(lbl);
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.ShowDialog(this);
+            pbOpenDialog.ImageLocation = openFileDialog1.FileName;
+            pbOpenDialog.SizeMode = PictureBoxSizeMode.StretchImage;
         }
     }
 }
