@@ -1,3 +1,4 @@
+using System.Collections.ObjectModel;
 using System.Diagnostics;
 using System.Security.Policy;
 
@@ -9,6 +10,7 @@ namespace LabaratoryOOP1
         private DateTime bd = new DateTime(DateTime.Now.Year, 5, 16);
         private int XDirection = 0;
         private int YDirection = 0;
+        private int count = 1;
 
 
         public frmMain()
@@ -254,6 +256,23 @@ namespace LabaratoryOOP1
             openFileDialog1.ShowDialog(this);
             pbOpenDialog.ImageLocation = openFileDialog1.FileName;
             pbOpenDialog.SizeMode = PictureBoxSizeMode.StretchImage;
+        }
+
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            checkedListBox.Items.Add(count);
+            count++;
+        }
+
+        private void buttonRemove_Click(object sender, EventArgs e)
+        {
+            for(int i = 0; i < checkedListBox.Items.Count; i++)
+            {
+                if ((int)checkedListBox.Items[i] % 2 == 0)
+                {
+                    checkedListBox.Items.RemoveAt(i);
+                }
+            }
         }
     }
 }

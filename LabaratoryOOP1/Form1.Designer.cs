@@ -64,6 +64,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.pbOpenDialog = new System.Windows.Forms.PictureBox();
+            this.buttonAdd = new System.Windows.Forms.Button();
+            this.buttonRemove = new System.Windows.Forms.Button();
+            this.checkedListBox = new System.Windows.Forms.CheckedListBox();
             this.gbColor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBlue)).BeginInit();
@@ -178,7 +181,7 @@
             // 
             // dtpChooseDate
             // 
-            this.dtpChooseDate.Location = new System.Drawing.Point(479, 34);
+            this.dtpChooseDate.Location = new System.Drawing.Point(357, 250);
             this.dtpChooseDate.Name = "dtpChooseDate";
             this.dtpChooseDate.Size = new System.Drawing.Size(200, 23);
             this.dtpChooseDate.TabIndex = 3;
@@ -187,7 +190,7 @@
             // lblBirthDay
             // 
             this.lblBirthDay.AutoSize = true;
-            this.lblBirthDay.Location = new System.Drawing.Point(553, 82);
+            this.lblBirthDay.Location = new System.Drawing.Point(357, 286);
             this.lblBirthDay.Name = "lblBirthDay";
             this.lblBirthDay.Size = new System.Drawing.Size(38, 15);
             this.lblBirthDay.TabIndex = 4;
@@ -261,7 +264,7 @@
             // gitHubLink
             // 
             this.gitHubLink.AutoSize = true;
-            this.gitHubLink.Location = new System.Drawing.Point(692, 426);
+            this.gitHubLink.Location = new System.Drawing.Point(291, 21);
             this.gitHubLink.Name = "gitHubLink";
             this.gitHubLink.Size = new System.Drawing.Size(96, 15);
             this.gitHubLink.TabIndex = 11;
@@ -272,7 +275,7 @@
             // gpField
             // 
             this.gpField.Controls.Add(this.player);
-            this.gpField.Location = new System.Drawing.Point(339, 121);
+            this.gpField.Location = new System.Drawing.Point(458, 53);
             this.gpField.Name = "gpField";
             this.gpField.Size = new System.Drawing.Size(382, 180);
             this.gpField.TabIndex = 12;
@@ -291,7 +294,7 @@
             // 
             // btnX
             // 
-            this.btnX.Location = new System.Drawing.Point(477, 343);
+            this.btnX.Location = new System.Drawing.Point(402, 111);
             this.btnX.Name = "btnX";
             this.btnX.Size = new System.Drawing.Size(30, 30);
             this.btnX.TabIndex = 13;
@@ -302,7 +305,7 @@
             // 
             // btnY
             // 
-            this.btnY.Location = new System.Drawing.Point(441, 307);
+            this.btnY.Location = new System.Drawing.Point(357, 75);
             this.btnY.Name = "btnY";
             this.btnY.Size = new System.Drawing.Size(30, 30);
             this.btnY.TabIndex = 15;
@@ -324,7 +327,7 @@
             // 
             // btnXReverse
             // 
-            this.btnXReverse.Location = new System.Drawing.Point(407, 343);
+            this.btnXReverse.Location = new System.Drawing.Point(308, 111);
             this.btnXReverse.Name = "btnXReverse";
             this.btnXReverse.Size = new System.Drawing.Size(30, 30);
             this.btnXReverse.TabIndex = 16;
@@ -335,7 +338,7 @@
             // 
             // btnYReverse
             // 
-            this.btnYReverse.Location = new System.Drawing.Point(441, 376);
+            this.btnYReverse.Location = new System.Drawing.Point(357, 160);
             this.btnYReverse.Name = "btnYReverse";
             this.btnYReverse.Size = new System.Drawing.Size(30, 30);
             this.btnYReverse.TabIndex = 17;
@@ -347,7 +350,7 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(600, 312);
+            this.comboBox1.Location = new System.Drawing.Point(861, 208);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 23);
             this.comboBox1.TabIndex = 18;
@@ -356,7 +359,7 @@
             // 
             // pbPos
             // 
-            this.pbPos.Location = new System.Drawing.Point(339, 100);
+            this.pbPos.Location = new System.Drawing.Point(458, 21);
             this.pbPos.Name = "pbPos";
             this.pbPos.Size = new System.Drawing.Size(382, 23);
             this.pbPos.TabIndex = 19;
@@ -366,7 +369,7 @@
             // 
             this.lbTeleporter.FormattingEnabled = true;
             this.lbTeleporter.ItemHeight = 15;
-            this.lbTeleporter.Location = new System.Drawing.Point(727, 132);
+            this.lbTeleporter.Location = new System.Drawing.Point(861, 21);
             this.lbTeleporter.Name = "lbTeleporter";
             this.lbTeleporter.Size = new System.Drawing.Size(186, 169);
             this.lbTeleporter.TabIndex = 20;
@@ -379,16 +382,47 @@
             // 
             this.pbOpenDialog.Location = new System.Drawing.Point(12, 312);
             this.pbOpenDialog.Name = "pbOpenDialog";
-            this.pbOpenDialog.Size = new System.Drawing.Size(326, 94);
+            this.pbOpenDialog.Size = new System.Drawing.Size(326, 129);
             this.pbOpenDialog.TabIndex = 21;
             this.pbOpenDialog.TabStop = false;
             this.pbOpenDialog.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // buttonAdd
+            // 
+            this.buttonAdd.Location = new System.Drawing.Point(587, 250);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdd.TabIndex = 22;
+            this.buttonAdd.Text = "добавить";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            // 
+            // buttonRemove
+            // 
+            this.buttonRemove.Location = new System.Drawing.Point(587, 282);
+            this.buttonRemove.Name = "buttonRemove";
+            this.buttonRemove.Size = new System.Drawing.Size(75, 49);
+            this.buttonRemove.TabIndex = 23;
+            this.buttonRemove.Text = "убрать четные";
+            this.buttonRemove.UseVisualStyleBackColor = true;
+            this.buttonRemove.Click += new System.EventHandler(this.buttonRemove_Click);
+            // 
+            // checkedListBox
+            // 
+            this.checkedListBox.FormattingEnabled = true;
+            this.checkedListBox.Location = new System.Drawing.Point(701, 250);
+            this.checkedListBox.Name = "checkedListBox";
+            this.checkedListBox.Size = new System.Drawing.Size(120, 184);
+            this.checkedListBox.TabIndex = 24;
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1059, 450);
+            this.Controls.Add(this.checkedListBox);
+            this.Controls.Add(this.buttonRemove);
+            this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.pbOpenDialog);
             this.Controls.Add(this.lbTeleporter);
             this.Controls.Add(this.pbPos);
@@ -467,5 +501,8 @@
         private OpenFileDialog openFileDialog1;
         private ColorDialog colorDialog1;
         private PictureBox pbOpenDialog;
+        private Button buttonAdd;
+        private Button buttonRemove;
+        private CheckedListBox checkedListBox;
     }
 }
