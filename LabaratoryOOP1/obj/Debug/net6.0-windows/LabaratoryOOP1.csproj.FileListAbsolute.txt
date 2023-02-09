@@ -49,3 +49,4 @@ C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Debug\net6
 C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Debug\net6.0-windows\LabaratoryOOP1.pdb
 C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Debug\net6.0-windows\LabaratoryOOP1.genruntimeconfig.cache
 C:\Users\xmoon\Source\Repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Debug\net6.0-windows\ref\LabaratoryOOP1.dll
+C:\Users\xmoon\source\repos\OOPFirstLab32131234521\LabaratoryOOP1\obj\Debug\net6.0-windows\LabaratoryOOP1.Properties.Resources.resources

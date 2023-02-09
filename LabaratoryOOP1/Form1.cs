@@ -11,6 +11,7 @@ namespace LabaratoryOOP1
         private int XDirection = 0;
         private int YDirection = 0;
         private int count = 1;
+        private bool backgroundRgb = false;
 
 
         public frmMain()
@@ -35,12 +36,17 @@ namespace LabaratoryOOP1
 
         private void changeColor()
         {
-            Console
-                .WriteLine("sda");
             autoGenerateColor.BackColor = Color.FromArgb(
                 (getColor(red)),
                 (getColor(green)),
                 (getColor(blue)));
+            if (backgroundRgb)
+            {
+                gpField.BackColor = Color.FromArgb(
+                (getColor(red)),
+                (getColor(green)),
+                (getColor(blue)));
+            }
         }
 
         private int getColor(int color)
@@ -57,6 +63,7 @@ namespace LabaratoryOOP1
         private void nuRed_ValueChanged(object sender, EventArgs e)
         {
             pbColor.BackColor = Color.FromArgb(((int)nuRed.Value), ((int)nuGreen.Value), ((int)nuBlue.Value));
+
         }
 
         private void btnReset_Click(object sender, EventArgs e)
@@ -273,6 +280,11 @@ namespace LabaratoryOOP1
                     checkedListBox.Items.RemoveAt(i);
                 }
             }
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            backgroundRgb = !backgroundRgb;
         }
     }
 }

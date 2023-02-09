@@ -48,8 +48,6 @@
             this.lblGreen = new System.Windows.Forms.Label();
             this.lblBlue = new System.Windows.Forms.Label();
             this.gitHubLink = new System.Windows.Forms.LinkLabel();
-            this.gpField = new System.Windows.Forms.GroupBox();
-            this.player = new System.Windows.Forms.RadioButton();
             this.btnX = new System.Windows.Forms.Button();
             this.btnY = new System.Windows.Forms.Button();
             this.timerX = new System.Windows.Forms.Timer(this.components);
@@ -67,6 +65,9 @@
             this.buttonAdd = new System.Windows.Forms.Button();
             this.buttonRemove = new System.Windows.Forms.Button();
             this.checkedListBox = new System.Windows.Forms.CheckedListBox();
+            this.gpField = new System.Windows.Forms.Panel();
+            this.player = new System.Windows.Forms.RadioButton();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.gbColor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBlue)).BeginInit();
@@ -76,8 +77,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.redTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlueTrackBar)).BeginInit();
-            this.gpField.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbOpenDialog)).BeginInit();
+            this.gpField.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbColor
@@ -272,26 +273,6 @@
             this.gitHubLink.Text = "go to my GitHub";
             this.gitHubLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.gitHubLink_LinkClicked);
             // 
-            // gpField
-            // 
-            this.gpField.Controls.Add(this.player);
-            this.gpField.Location = new System.Drawing.Point(458, 53);
-            this.gpField.Name = "gpField";
-            this.gpField.Size = new System.Drawing.Size(382, 180);
-            this.gpField.TabIndex = 12;
-            this.gpField.TabStop = false;
-            // 
-            // player
-            // 
-            this.player.AutoSize = true;
-            this.player.Location = new System.Drawing.Point(68, 24);
-            this.player.Name = "player";
-            this.player.Size = new System.Drawing.Size(14, 13);
-            this.player.TabIndex = 0;
-            this.player.TabStop = true;
-            this.player.UseVisualStyleBackColor = true;
-            this.player.LocationChanged += new System.EventHandler(this.player_LocationChanged);
-            // 
             // btnX
             // 
             this.btnX.Location = new System.Drawing.Point(402, 111);
@@ -415,11 +396,43 @@
             this.checkedListBox.Size = new System.Drawing.Size(120, 184);
             this.checkedListBox.TabIndex = 24;
             // 
+            // gpField
+            // 
+            this.gpField.Controls.Add(this.player);
+            this.gpField.Location = new System.Drawing.Point(458, 63);
+            this.gpField.Name = "gpField";
+            this.gpField.Size = new System.Drawing.Size(397, 168);
+            this.gpField.TabIndex = 25;
+            // 
+            // player
+            // 
+            this.player.AutoSize = true;
+            this.player.Location = new System.Drawing.Point(56, 42);
+            this.player.Name = "player";
+            this.player.Size = new System.Drawing.Size(14, 13);
+            this.player.TabIndex = 0;
+            this.player.TabStop = true;
+            this.player.UseVisualStyleBackColor = true;
+            this.player.LocationChanged += new System.EventHandler(this.player_LocationChanged);
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(861, 242);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(44, 19);
+            this.checkBox1.TabIndex = 26;
+            this.checkBox1.Text = "rgb";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1059, 450);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.gpField);
             this.Controls.Add(this.checkedListBox);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonAdd);
@@ -431,7 +444,6 @@
             this.Controls.Add(this.btnXReverse);
             this.Controls.Add(this.btnY);
             this.Controls.Add(this.btnX);
-            this.Controls.Add(this.gpField);
             this.Controls.Add(this.gitHubLink);
             this.Controls.Add(this.lblBlue);
             this.Controls.Add(this.lblGreen);
@@ -457,9 +469,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.redTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.greenTrackBar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BlueTrackBar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOpenDialog)).EndInit();
             this.gpField.ResumeLayout(false);
             this.gpField.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbOpenDialog)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -485,8 +497,6 @@
         private Label lblGreen;
         private Label lblBlue;
         private LinkLabel gitHubLink;
-        private GroupBox gpField;
-        private RadioButton player;
         private Button btnX;
         private Button btnY;
         private System.Windows.Forms.Timer timerX;
@@ -504,5 +514,8 @@
         private Button buttonAdd;
         private Button buttonRemove;
         private CheckedListBox checkedListBox;
+        private Panel gpField;
+        private RadioButton player;
+        private CheckBox checkBox1;
     }
 }
