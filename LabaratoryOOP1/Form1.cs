@@ -12,12 +12,13 @@ namespace LabaratoryOOP1
         private int YDirection = 0;
         private int count = 1;
         private bool backgroundRgb = false;
+        private int value = 0;
 
 
         public frmMain()
         {
             this.InitializeComponent();
-            pbPos.Maximum = (gpField.Width - player.Width) + (gpField.Height - player.Height);
+            pbPos.Maximum = gpField.Size.Width + gpField.Size.Height - 31;
             DateTime now = DateTime.Now; 
             if(now.CompareTo(bd) > 0 )
             {
@@ -139,10 +140,6 @@ namespace LabaratoryOOP1
 
         }
 
-        private void frmMain_Load(object sender, EventArgs e)
-        {
-
-        }
 
         private void gitHubLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -286,5 +283,33 @@ namespace LabaratoryOOP1
         {
             backgroundRgb = !backgroundRgb;
         }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if(value == progressBar1.Maximum)
+            {
+                timer2.Stop();
+                return;
+            }
+            value++;
+            progressBar1.Value = value;
+        }
+
+        private void startToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            timer2.Start();
+        }
+
+        private void stopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            timer2.Stop();
+        }
+
+        private void resetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            value = 0;
+            progressBar1.Value = value;
+        }
+
     }
 }

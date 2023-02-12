@@ -8,23 +8,23 @@
     "net6.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\xmoon\\.nuget\\packages\\": {}
+    "C:\\Users\\Светлана\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\xmoon\\Source\\Repos\\OOPFirstLab32131234521\\LabaratoryOOP1\\LabaratoryOOP1.csproj",
+      "projectUniqueName": "C:\\Users\\Светлана\\source\\repos\\OOPFirstLab\\LabaratoryOOP1\\LabaratoryOOP1.csproj",
       "projectName": "LabaratoryOOP1",
-      "projectPath": "C:\\Users\\xmoon\\Source\\Repos\\OOPFirstLab32131234521\\LabaratoryOOP1\\LabaratoryOOP1.csproj",
-      "packagesPath": "C:\\Users\\xmoon\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\xmoon\\Source\\Repos\\OOPFirstLab32131234521\\LabaratoryOOP1\\obj\\",
+      "projectPath": "C:\\Users\\Светлана\\source\\repos\\OOPFirstLab\\LabaratoryOOP1\\LabaratoryOOP1.csproj",
+      "packagesPath": "C:\\Users\\Светлана\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Светлана\\source\\repos\\OOPFirstLab\\LabaratoryOOP1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\xmoon\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Светлана\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net6.0-windows"
+        "net6.0-windows7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
@@ -51,8 +51,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -64,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
