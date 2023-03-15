@@ -74,6 +74,8 @@
             this.resetToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.cb = new System.Windows.Forms.CheckBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.gbColor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbColor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nuBlue)).BeginInit();
@@ -114,6 +116,7 @@
             this.pbColor.TabIndex = 2;
             this.pbColor.TabStop = false;
             this.pbColor.Click += new System.EventHandler(this.pbColor_Click);
+            this.pbColor.Paint += new System.Windows.Forms.PaintEventHandler(this.pbColor_Paint);
             // 
             // btnReset
             // 
@@ -294,6 +297,9 @@
             // 
             // btnX
             // 
+            this.btnX.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnX.Location = new System.Drawing.Point(459, 148);
             this.btnX.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnX.Name = "btnX";
@@ -392,6 +398,7 @@
             // 
             // pbOpenDialog
             // 
+            this.pbOpenDialog.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pbOpenDialog.Location = new System.Drawing.Point(14, 416);
             this.pbOpenDialog.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbOpenDialog.Name = "pbOpenDialog";
@@ -509,11 +516,31 @@
             // 
             this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
+            // cb
+            // 
+            this.cb.AutoSize = true;
+            this.cb.Location = new System.Drawing.Point(450, 536);
+            this.cb.Name = "cb";
+            this.cb.Size = new System.Drawing.Size(101, 24);
+            this.cb.TabIndex = 29;
+            this.cb.Text = "checkBox2";
+            this.cb.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(571, 536);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(125, 27);
+            this.textBox1.TabIndex = 30;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1210, 600);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cb);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.gpField);
@@ -544,6 +571,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmMain";
             this.Text = "Form1";
+            this.SizeChanged += new System.EventHandler(this.frmMain_SizeChanged);
             this.DoubleClick += new System.EventHandler(this.niDest_DoubleClick);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmMain_MouseClick);
             this.gbColor.ResumeLayout(false);
@@ -611,5 +639,7 @@
         private ToolStripMenuItem resetToolStripMenuItem;
         private ProgressBar progressBar1;
         private System.Windows.Forms.Timer timer2;
+        private CheckBox cb;
+        private TextBox textBox1;
     }
 }

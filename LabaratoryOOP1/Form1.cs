@@ -177,43 +177,51 @@ namespace LabaratoryOOP1
         {
             XDirection = 1;
             timerX.Enabled = true;
+            btnX.Size = new Size(btnX.Size.Width +5, btnX.Size.Height +5);
         }
 
         private void btnX_MouseLeave(object sender, EventArgs e)
         {
+            btnX.Size = new Size(btnX.Size.Width - 5, btnX.Size.Height - 5);
             timerX.Enabled = false;
         }
 
         private void btnY_MouseEnter(object sender, EventArgs e)
         {
             YDirection = -1;
+            btnY.Size = new Size(btnY.Size.Width + 5, btnY.Size.Height + 5);
             timerY.Enabled = true;
         }
 
         private void btnY_MouseLeave(object sender, EventArgs e)
         {
+            btnY.Size = new Size(btnY.Size.Width - 5, btnY.Size.Height - 5);
             timerY.Enabled = false;
         }
 
         private void btnXReverse_MouseEnter(object sender, EventArgs e)
         {
+            btnXReverse.Size = new Size(btnXReverse.Size.Width + 5, btnXReverse.Size.Height + 5);
             XDirection = -1;
             timerX.Enabled = true;
         }
 
         private void btnXReverse_MouseLeave(object sender, EventArgs e)
         {
+            btnXReverse.Size = new Size(btnXReverse.Size.Width - 5, btnXReverse.Size.Height - 5);
             timerX.Enabled = false;
         }
 
         private void btnYReverse_MouseEnter(object sender, EventArgs e)
         {
+            btnYReverse.Size = new Size(btnYReverse.Size.Width + 5, btnYReverse.Size.Height + 5);
             YDirection = 1;
             timerY.Enabled = true;
         }
 
         private void btnYReverse_MouseLeave(object sender, EventArgs e)
         {
+            btnYReverse.Size = new Size(btnYReverse.Size.Width - 5, btnYReverse.Size.Height - 5);
             timerY.Enabled = false;
         }
 
@@ -311,5 +319,22 @@ namespace LabaratoryOOP1
             progressBar1.Value = value;
         }
 
+        private void frmMain_SizeChanged(object sender, EventArgs e)
+        {
+            timer2.Start();
+        }
+
+        private void pbColor_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            g.DrawLine(System.Drawing.Pens.Red, pbColor.Top, pbColor.Left, pbColor.Bottom, pbColor.Right);
+            g.DrawLine(System.Drawing.Pens.Red, pbColor.Top, pbColor.Left, pbColor.Bottom, pbColor.Left);
+           
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            cb.Checked = textBox1.Text.Length != 0;
+        }
     }
 }
